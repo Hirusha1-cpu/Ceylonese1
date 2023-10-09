@@ -1,0 +1,11 @@
+/* slider.css */
+.slider {
+  overflow: hidden;
+  /* position: relative; */
+}
+
+/* slider.css */
+.slide-wrapper {
+  display: flex;
+  transition: left 0.5s ease; /* Add a smooth transition for the left property */
+}
