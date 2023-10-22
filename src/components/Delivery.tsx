@@ -14,7 +14,7 @@ const Delivery = () => {
         <div className="mt-3 max-md:hidden">
           <Image src="/sm.png" alt="" width={2000} height={2000} />
         </div>
-        <div className=" mt-4 p-2 pr-3 text-center xl:text-xl xl:mr-3">
+        <div className=" mt-4 p-2 flex max-md:justify-center max-md:text-center md:pr-20  text-center xl:text-lg xl:mr-3">
           <p>
             Revolutionize your dining experience with Ceylonese - where were
             dedicated to giving your hunger a safer, faster, and better

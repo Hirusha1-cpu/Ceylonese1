@@ -6,6 +6,7 @@ interface ModalProps {
   isVisible: boolean;
   onClose: () => void;
 }
+
 const curries = [
   { id: 1, curry: "Dhal Cuury" },
   { id: 2, curry: "Beetroot Cuury" },
@@ -24,15 +25,17 @@ const handleCheck = () => {
     title: "Good job!",
     text: "You clicked the button!",
     icon: "success",
-    buttons: ["Aww yiss!"], // Use an array to define the button(s)
+    buttons: ["Aww yiss!"],
   });
 };
 
 const Modal: React.FC<ModalProps> = ({ isVisible, onClose }) => {
-  if (!isVisible) return null;
   const [quantity, setQuantity] = useState(1);
+
+  if (!isVisible) return null;
+
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center">
+    <div className="z-10 fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center">
       <div className="w-[600px] flex flex-col">
         <button
           className="text-white text-xl place-self-end"
@@ -41,10 +44,8 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose }) => {
           X
         </button>
         <div className="bg-white p-2 rounded">
-          {/* modal cart */}
           <div>
             <div className="shadow-md border text-black border-slate-300 flex flex-col gap-3 p-8">
-              {/* set menu */}
               <div className="flex flex-row gap-3 pr-20">
                 <div>
                   <Image
@@ -54,7 +55,6 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose }) => {
                     height={100}
                   />
                 </div>
-                {/* menu */}
                 <div className="flex flex-col mt-5 justify-start">
                   <h2 className="font-bold">Set Menu 01</h2>
                   <h3>$ 14.00</h3>
@@ -77,9 +77,7 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose }) => {
                     </div>
                   </div>
                 </div>
-                {/* cart */}
                 <div className="flex justify-end items-center ml-14">
-                  {/* quntity */}
                   <div className="flex justify-between  w-full p-3  ">
                     <div className="flex gap-4 items-center">
                       Qty:
@@ -104,9 +102,7 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose }) => {
                   </div>
                 </div>
               </div>
-              {/* fried rice */}
               <div></div>
-              {/* totals */}
               <div>
                 <div className="border-t border-slate-300">
                   <div className="flex justify-between flex-row ">
@@ -127,7 +123,7 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose }) => {
                   </div>
                   <div className="flex justify-center items-center">
                     <div className="bg-red-900 text-white w-4/12 rounded-md flex items-center justify-center p-1 mt-2">
-                      <button onClick={()=> handleCheck()}>CheckOut</button>
+                      <button onClick={() => handleCheck()}>CheckOut</button>
                     </div>
                   </div>
                 </div>

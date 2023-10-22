@@ -6,7 +6,7 @@ const Chef = () => {
   return (
     <div className=" bg-red-900 flex flex-row justify-evenly mt-10">
       <div className="max-md:hidden">
-        <div className="chef-image-container">
+        <div className="mt-5">
           <Image src="/Chef1.png" alt="" width={500} height={500} />
         </div>
       </div>
@@ -21,9 +21,17 @@ const Chef = () => {
           repellat debitis voluptatem neque accusamus laborum pariatur.
           Voluptates aut vel nam!!
         </p>
+        <div className="flex flex-row gap-80 mt-6">
+          <div className="">
+              <Image src="/aththe 1.png" alt="" width={100} height={100}/>
+          </div>
+          <div className="">
+          <Image src="/aththe 1.png" alt="" width={100} height={100}/>
+          </div>
+        </div>
       </div>
-      <div className="max-md:hidden mt-20">
-        <div className="chef-image-container ">
+      <div className="max-md:hidden mt-[85px]">
+        <div className="">
           <Image src="/Chef2.png" alt="" width={500} height={500} />
         </div>
       </div>

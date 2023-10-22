@@ -1,9 +1,12 @@
 import Navbar from "@/components/Navbar";
+
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
 import PlaceReservation from "@/components/PlaceReservation";
+import { usePathname } from "next/navigation";
+import MenuNavbar from "@/components/MenuNavbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +20,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // const router = usePathname();
   return (
     <html lang="en">
       <head>
@@ -30,8 +34,21 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
+        {/* Conditional rendering of the navbar based on the current route */}
+        {/* {router === "/menu" ? <MenuNavbar /> : <Navbar />} */}
         <Navbar />
-        <PlaceReservation />
+
+        <div
+          style={{
+            position: "sticky",
+            top: "10",
+            left: "0",
+            right: "0",
+            zIndex: "10", // You can adjust this value as needed
+          }}
+        >
+          <PlaceReservation />
+        </div>
         {children}
         <Footer />
       </body>

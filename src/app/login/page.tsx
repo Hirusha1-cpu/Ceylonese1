@@ -9,12 +9,12 @@ const LoginPage = () => {
   // const {data, status} = useSession();
   const router = useRouter()
 
-    if( status === "loading"){
-      return <p>Loading...</p>
-    }
-    if( status === "authenticated"){
-      router.push("/");
-    }
+    // if( status === "loading"){
+    //   return <p>Loading...</p>
+    // }
+    // if( status === "authenticated"){
+    //   router.push("/");
+    // }
   
   return (
     <div className="p-4 h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)] flex items-center justify-center">

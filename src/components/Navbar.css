@@ -1,3 +1,12 @@
+/* Import the Kenyan Coffee font */
+@import url('https://fonts.cdnfonts.com/css/kenyan-coffee'); 
+ /* @import '/kenyan-coffee.rg-regular.otf' */
+
+/* Apply the font to the specific class */
+.kenyan-coffee-font {
+  font-family: 'Kenyan Coffee', sans-serif;
+}
+
 .navbar.sticky {
     background-color: rgb(202, 202, 43);
   }

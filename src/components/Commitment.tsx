@@ -2,6 +2,8 @@
 import Image from "next/image";
 import React from "react";
 
+
+
 const Commitment = () => {
   const itemStyle = {
     margin: "0.5px", // Adjust this value to set the desired gap
@@ -14,7 +16,8 @@ const Commitment = () => {
         Our Commitment
       </div>
       {/* commitments */}
-      <div className="grid max-md:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-4 mt-5 justify-center items-center">
+      <div className="flex flex-row gap-8 max-sm:flex-col mt-5 justify-center items-center">
+ 
         <div style={itemStyle}>
           <div className="flex flex-col justify-center items-center gap-1">
             <Image src="/Untitled-1.png" alt="" width={160} height={160} />

@@ -15,7 +15,7 @@ const meats = [
   { id: 4, curry: "Lamb Cuury" },
 ];
 
-const checkoutPage = () => {
+const CheckoutPage: React.FC = () => {
   const [quantity, setQuantity] = useState(1);
   return (
     <div>
@@ -27,9 +27,9 @@ const checkoutPage = () => {
           </h2>
         </div>
         {/* container of form and receipt */}
-        <div className="flex flex-row max-md:flex-col gap-10">
+        <div className="flex flex-row justify-center  max-md:flex-col gap-10">
           {/* form */}
-          <div className="md:pl-40 max-md:p-10">
+          <div className=" max-md:p-10">
             {/* contact */}
             <div>
               {/* header and form*/}
@@ -42,15 +42,15 @@ const checkoutPage = () => {
                     className="py-4 mt-4 border-t flex flex-col gap-3 pl-2"
                   >
                     {/* fname and lastname */}
-                    <div className="flex flex-row gap-1">
-                      <div className="mr-6">
+                    <div className="flex flex-row max-md:flex-col gap-1">
+                      <div className="w-full">
                         <input
                           type="text"
                           placeholder="Full Name"
                           id="txtFullName"
                         />
                       </div>
-                      <div className="">
+                      <div className="w-full">
                         <input
                           type="text"
                           placeholder="Last Name"
@@ -132,7 +132,7 @@ const checkoutPage = () => {
                   />
                 </div>
                 {/* fname and lastname */}
-                <div className="flex flex-row gap-2">
+                <div className="flex flex-row max-md:flex-col gap-2">
                   <div className="mr-6">
                     <input
                       type="text"
@@ -140,7 +140,7 @@ const checkoutPage = () => {
                       id="txtFullName"
                     />
                   </div>
-                  <div className="">
+                  <div className="mr-6">
                     <input
                       type="text"
                       placeholder="Last Name"
@@ -175,8 +175,19 @@ const checkoutPage = () => {
             {/* payment method */}
             <div>
               <div className="flex flex-row pt-4 gap-10 items-center mb-4">
+                <div className="max-md:hidden">
+
                 <h2 className="pl-2 ">Payment Method</h2>
-                <h2>PAY NOW</h2>
+                </div>
+                <div >
+                {/* {window.innerWidth < 768 ? (
+            <Image src="/paynow-logo.png" alt="" width={100} height={20} />
+          ) : (
+            <Image src="/paynow-logo.png" alt="" width={100} height={20} />
+
+          )} */}
+          <Image src="/paynow-logo.png" alt="" width={100} height={20} />
+                  </div>
                 <div className="bg-red-900 text-white font-bold px-10 py-1  rounded-md ml-16">
                   Pay Now
                 </div>
@@ -273,4 +284,4 @@ const checkoutPage = () => {
   );
 };
 
-export default checkoutPage;
+export default CheckoutPage;

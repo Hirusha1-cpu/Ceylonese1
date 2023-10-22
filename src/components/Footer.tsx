@@ -4,10 +4,10 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-red-900 p-4 lg:p-6 xl:p-10 xl:text-base max-md:text-center text-white flex items-center justify-between lg:flex-row md:flex-row max-sm:flex-col">
-      <div className="col flex justify-center items-center flex-col">
+    <div className="bg-red-900 max-md:items-center p-3 lg:p-4 xl:p-5  xl:text-base max-md:text-center text-white flex items-start justify-between lg:flex-row md:flex-row max-sm:flex-col" >
+      <div className="col flex justify-center items-center flex-col" id="footer-logo" >
         <h2 className="text-xl uppercase font-bold">Ceylonese</h2>
-        <div>
+        <div style={{marginTop:"-20px"}}>
           <Image src="/LOGO 1.png" alt="" width={200} height={30} />
         </div>
       </div>
@@ -39,7 +39,7 @@ const Footer = () => {
           <p>091 712 314</p>
         </div>
       </div>
-      <div className="col mb-5">
+      <div className="col mb-5 pr-5">
         <div className="font-bold mb-5">Follow Us</div>
         <div className="flex flex-col gap-2">
           <div className="flex flex-row gap-2">
@@ -61,4 +61,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

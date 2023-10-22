@@ -5,8 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import PlaceReservation from "./PlaceReservation";
 import "./navbar.css";
+import CartIcon from "./CartIcon";
 
-const Navbar = () => {
+
+const MenuNavbar = () => {
   const user = false;
   const [scrolling, setScrolling] = useState(false);
   const [size, setSize] = useState(false);
@@ -59,7 +61,7 @@ const Navbar = () => {
       {/* left link */}
       {scrolling ? (
         <div className="hidden md:flex gap-4 pl-[41px]">
-          <Link href="/">Home</Link>
+          <Link href="/">ome</Link>
           <Link href="/menu">Menu</Link>
           <Link href="/">Contact</Link>
         </div>
@@ -70,7 +72,7 @@ const Navbar = () => {
             transition: "max-width 0.8s ease-in-out", // Add transition to max-width
           }}
         >
-          <Link href="/">Home</Link>
+          <Link href="/">ome</Link>
           <Link href="/menu">Menu</Link>
           <Link href="/">Contact</Link>
         </div>
@@ -123,4 +125,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default MenuNavbar;

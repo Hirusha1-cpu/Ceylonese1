@@ -15,6 +15,7 @@
     "incremental": true,
     "plugins": [
       {
+        "@next/next":{},
         "name": "next"
       }
     ],

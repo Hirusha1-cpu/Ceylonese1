@@ -7,18 +7,18 @@ import CountDown from "./CountDown";
 const data = [
   {
     id: 1,
-    title: "always fresh and always crispy and always hot",
-    image: "/slide1.png",
+    title: "",
+    image: "/banner.png",
   },
   {
     id: 2,
-    title: "always fresh and always crispy and always hot",
-    image: "/slide2.png",
+    title: "",
+    image: "/banner.png",
   },
   {
     id: 3,
-    title: "always fresh and always crispy and always hot",
-    image: "/slide3.jpg",
+    title: "",
+    image: "/banner.png",
   },
 ];
 
@@ -34,10 +34,11 @@ const MenuSlide = () => {
   });
   return (
 
-    <div className="slider flex h-[calc(105vh-6rem)]">
+    <div className="slider flex h-[calc(80vh-15rem)]" >
     {/* image container */}
-    <div className="w-full max-md:relative">
-      <Image src={data[currentSlide].image} alt="" fill className="object-cover" />
+    <div className="w-full flex max-md:relative" style={{width: '100%', height: '80%', position: 'relative'}}>
+      {/* <Image src={data[currentSlide].image} alt="" fill className="object-cover" /> */}
+      <Image src={data[currentSlide].image} alt="" fill className="object-fill " />
       {/* Overlay text */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
         <h1 className="text-3xl max-md:text-4xl xl:text-5xl">{data[currentSlide].title}</h1>
